@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace LibraryApi.Models;
 
 public class AutorModel
@@ -7,6 +9,7 @@ public class AutorModel
     public string Nome { get; set; }
 
     public string Sobrenome { get; set; }
-
+    
+    [JsonIgnore]
     public ICollection<LivroModel> Livros { get; set; }
 }
